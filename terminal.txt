@@ -1,0 +1,42 @@
+Last login: Wed Feb 15 17:22:14 on ttys002
+CodeaCamp11s-Mac-mini:~ codea_mac_11$ cd Destop
+-bash: cd: Destop: No such file or directory
+CodeaCamp11s-Mac-mini:~ codea_mac_11$ cd Desktop
+CodeaCamp11s-Mac-mini:Desktop codea_mac_11$ cd /Users/codea_mac_11/Desktop/fase01/fase01_dia14_martes 
+CodeaCamp11s-Mac-mini:fase01_dia14_martes codea_mac_11$ ls
+chef.rb   chefs.db  test.rb
+CodeaCamp11s-Mac-mini:fase01_dia14_martes codea_mac_11$ cat << EOF > ~/.sqliterc
+> .headers on
+> .mode column
+> EOF
+CodeaCamp11s-Mac-mini:fase01_dia14_martes codea_mac_11$ $ sqlite3 EssentialSQL.db
+-bash: $: command not found
+CodeaCamp11s-Mac-mini:fase01_dia14_martes codea_mac_11$ sqlite3 chefs.db 
+-- Loading resources from /Users/codea_mac_11/.sqliterc
+
+SQLite version 3.8.10.2 2015-05-20 18:17:19
+Enter ".help" for usage hints.
+sqlite> SELECT * FROM chefs;
+id          first_name  last_name   birthday    email                     phone        created_at           updated_at         
+----------  ----------  ----------  ----------  ------------------------  -----------  -------------------  -------------------
+1           Ferran      Adriá      1985-02-09  ferran.adria@elbulli.com  42381093238  2017-02-15 15:28:49  2017-02-15 15:28:49
+2           Humberto    González   1979-05-14  h_glez@gmail.com          42381093131  2017-02-15 15:28:49  2017-02-15 15:28:49
+3           Ximena      Hernadez    1982-08-10  xoxo@yahoo.com            43381093121  2017-02-15 15:28:49  2017-02-15 15:28:49
+4           Ana         Ramirez     1983-03-03  ana@hotmail.com           52381093131  2017-02-15 15:28:49  2017-02-15 15:28:49
+sqlite> ^D
+CodeaCamp11s-Mac-mini:fase01_dia14_martes codea_mac_11$ ruby chef.rb
+[]
+CodeaCamp11s-Mac-mini:fase01_dia14_martes codea_mac_11$ sqlite3 chefs.db 
+-- Loading resources from /Users/codea_mac_11/.sqliterc
+
+SQLite version 3.8.10.2 2015-05-20 18:17:19
+Enter ".help" for usage hints.
+sqlite> SELECT * FROM chefs;
+id          first_name  last_name   birthday    email                     phone        created_at           updated_at         
+----------  ----------  ----------  ----------  ------------------------  -----------  -------------------  -------------------
+1           Ferran      Adriá      1985-02-09  ferran.adria@elbulli.com  42381093238  2017-02-15 15:28:49  2017-02-15 15:28:49
+2           Humberto    González   1979-05-14  h_glez@gmail.com          42381093131  2017-02-15 15:28:49  2017-02-15 15:28:49
+3           Ximena      Hernadez    1982-08-10  xoxo@yahoo.com            43381093121  2017-02-15 15:28:49  2017-02-15 15:28:49
+4           Ana         Ramirez     1983-03-03  ana@hotmail.com           52381093131  2017-02-15 15:28:49  2017-02-15 15:28:49
+5           MartinN     De la Rosa  2000-01-03  goma@gmail.com            62341093131  2017-02-15 17:36:44  2017-02-15 17:36:44
+sqlite> 
